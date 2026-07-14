@@ -3,21 +3,16 @@
     "short_name": "ТехноМаркет",
     "description": "Открывай наборы техники",
     "start_url": "/",
+    "id": "/",
     "display": "standalone",
     "background_color": "#f5f7fa",
     "theme_color": "#007aff",
     "icons": [
         {
             "src": "logo.png",
-            "sizes": "192x192",
+            "sizes": "402x408",
             "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "logo.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
         }
     ]
 }
