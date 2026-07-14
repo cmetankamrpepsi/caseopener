@@ -1,14 +1,14 @@
 const CACHE_NAME = 'technomarket-v1';
 const FILES_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/script.js',
-    '/manifest.json',
-    '/logo120.png',
-    '/logo180.png',
-    '/logo192.png',
-    '/logo512.png'
+    './',
+    './index.html',
+    './style.css',
+    './script.js',
+    './manifest.json',
+    './logo120.png',
+    './logo180.png',
+    './logo192.png',
+    './logo512.png'
 ];
 
 self.addEventListener('install', event => {

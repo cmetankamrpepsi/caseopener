@@ -8,8 +8,8 @@
     <link rel="manifest" href="manifest.json">
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then(() => console.log('✅ Service Worker зарегистрирован'))
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log('✅ SW зарегистрирован'))
                 .catch(err => console.error('❌ Ошибка SW:', err));
         }
     </script>
@@ -38,12 +38,10 @@
         <p class="hint">Нажми «Состав», чтобы увидеть, что может выпасть</p>
         <div class="case-grid" id="caseGrid"></div>
     </div>
-
     <div id="page-inventory" style="display:none;">
         <h2>🎒 Моя техника</h2>
         <div class="inv-grid" id="myItems"></div>
     </div>
-
     <div id="page-profile" style="display:none;">
         <h2>👤 Профиль</h2>
         <div id="profileContent"></div>
@@ -67,7 +65,7 @@
     <div class="modal-box">
         <button class="close-btn" onclick="closeBuyModal()">✕</button>
         <h2>✅ Набор куплен!</h2>
-        <p>Перейдите в раздел <strong>"Мои товары"</strong>, чтобы открыть его.</p>
+        <p>Перейдите в раздел <strong>"Мои товары"</strong>.</p>
         <button class="btn btn-success" onclick="closeBuyModal()">Отлично!</button>
     </div>
 </div>
@@ -75,9 +73,9 @@
 <div id="previewModal" class="modal-overlay">
     <div class="modal-box" style="max-width:500px; text-align:left;">
         <button class="close-btn" onclick="closePreviewModal()">✕</button>
-        <h2 id="previewTitle" style="text-align:center;">Состав набора</h2>
-        <div id="previewContent" style="margin-top:15px;"></div>
-        <button class="btn" onclick="closePreviewModal()" style="display:block; margin:15px auto 0;">Закрыть</button>
+        <h2 id="previewTitle">Состав набора</h2>
+        <div id="previewContent"></div>
+        <button class="btn" onclick="closePreviewModal()">Закрыть</button>
     </div>
 </div>
 
@@ -85,10 +83,10 @@
     <div class="modal-box" style="max-width:400px;">
         <button class="close-btn" onclick="closeWithdrawModal()">✕</button>
         <h2>💰 Вывод средств</h2>
-        <p style="margin:10px 0; font-size:14px; color:#666;">Введите сумму для вывода (мин. 10 монет)</p>
-        <input type="number" id="withdrawAmount" min="10" step="1" placeholder="Сумма" style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc; font-size:16px;">
-        <button class="btn" onclick="withdraw()" style="margin-top:10px; width:100%;">Вывести</button>
-        <div id="withdrawMessage" style="margin-top:10px; color:#dc3545;"></div>
+        <p style="margin:10px 0;">Мин. сумма: 10 монет</p>
+        <input type="number" id="withdrawAmount" min="10" step="1" placeholder="Сумма">
+        <button class="btn" onclick="withdraw()" style="margin-top:10px;">Вывести</button>
+        <div id="withdrawMessage"></div>
     </div>
 </div>
 
