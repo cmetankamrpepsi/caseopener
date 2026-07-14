@@ -5,8 +5,10 @@ const FILES_TO_CACHE = [
     '/style.css',
     '/script.js',
     '/manifest.json',
-    '/logo.png',
-    '/gold.webp'
+    '/logo120.png',
+    '/logo180.png',
+    '/logo192.png',
+    '/logo512.png'
 ];
 
 self.addEventListener('install', event => {
